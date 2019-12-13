@@ -28,10 +28,10 @@ Extentionsから「emojisense」をキーワードに検索し、「:emojisense:
 
 # :emojisense:拡張の設定
 いずれもデフォルトでは全て有効になっています。
-- emojisense.unicodeCompletionsEnabled
+- emojisense.unicodeCompletionsEnabled: 
   絵文字をUnicodeとして挿入する補完を有効にする。
   例）:smile_cat:->😸
-- emojisense.markupCompletionsEnabled：絵文字マークアップを挿入する補完を有効にする。例）::smile_cat->:smile_cat:
-- emojisense.showOnColon：コロンを入力すると、絵文字補完を自動的に表示。
+- emojisense.markupCompletionsEnabled: 絵文字マークアップを挿入する補完を有効にする。例）::smile_cat->:smile_cat:
+- emojisense.showOnColon: コロンを入力すると、絵文字補完を自動的に表示。
 
 
