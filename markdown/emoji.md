@@ -1,4 +1,7 @@
-VSCodeでemojiのオートコンプリートを使う
+VSCodeで絵文字のオートコンプリート＆プレビュー
+
+# VSCode拡張「Markdown Emoji」をインストール
+markdownプレビューにマークダウン絵文字がプレビュー表示されるようになります。
 
 # VSCode拡張「:emojisense:」をインストール
 Extentionsから「emojisense」をキーワードに検索し、「:emojisense:」をインストールします。
