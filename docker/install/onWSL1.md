@@ -1,7 +1,15 @@
 WSL + Ubuntu 上でdocker-composeを動作させる
 
+# tl;dr
+WSLにインストールしたdockerから、「Docker for Windows」デーモンにリモート接続します。
+
 # 確認環境
 📀WSL with Ubuntu 18.04LTS
+
+# Docker for Windows のインストール
+[ここ](https://qiita.com/fkooo/items/d2fddef9091b906675ca)等を参考に、Docker for Windowsをインストールします。
+インストール後、リモート接続を許可するため、Docker for Windows の Settings画面 から、`General` -> `Expose daemon on tcp://localhost:2375 without TLS`のチェックをONにします。 
+(画像)
 
 # docker のインストール
 [公式](http://docs.docker.jp/engine/installation/linux/docker-ce/ubuntu.html)の通りに、Docker CEをインストールします。
