@@ -4,7 +4,7 @@ reactアプリをhttpsで公開する
 OS: Amazon Linux release 2 (Karoo)
 
 # nginxのインストール
-AL2 では標準で Nginx の YUM 向けパッケージが提供されていないため、extraリポジトリからインストールします。
+Amazon Linux 2 では標準で Nginx の YUM 向けパッケージが提供されていないため、extraリポジトリからインストールします。
 ```
 $ sudo amazon-linux-extras install nginx1.12
 ```
@@ -39,10 +39,9 @@ $ sudo chown root:root server.*
 ```
 ※`server.scr`作成時の答えは全て`enter`で回答しました。
 
-
 ### 設定ファイルの追加
-設定ファイルを追加します。ここでは、``
-ちなみに、`/etc/nginx/conf.d/*.conf`は、`/etc/nginx/nginx.conf`から呼び出されます。
+設定ファイルを追加します。ここでは、`my_ssl_app`という名前にしました。
+ちなみに、`/etc/nginx/conf.d/*.conf`は、`/etc/nginx/nginx.conf`から呼び出されます。ワイルドカード（`*.conf`）で呼び出されるため、名前は何でも構いません。
 ```
 $ cd /etc/nginx/conf.d
 $ touch my_ssl_app.conf
@@ -92,3 +91,5 @@ $ npm start
 ### 👀ブラウザで確認
 ブラウザからhttps接続して確認すると、以下のページが表示されます。
 (hello_react.png)
+
+以上。
