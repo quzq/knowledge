@@ -10,7 +10,6 @@ react にて、画像リンク切れの際、imgタグを非表示にする
 reactではこれができないため、以下のように`onError`ハンドラを作成します。
 
 ```Javascript
-<img src={`${process.env.PUBLIC_URL}/logo192_.png`} onError={e => e.target.src = ''} />
 <img src={`${process.env.PUBLIC_URL}/logo192_.png`} onError={e => e.target.style.display = 'none'} />
 ```
 
@@ -26,7 +25,6 @@ function App() {
       <img border="1" src={`${process.env.PUBLIC_URL}/logo192.png`} />
       <img border="1" src={`${process.env.PUBLIC_URL}/logo192_.png`} />
       <img border="1" src={`${process.env.PUBLIC_URL}/logo192_.png`} onerror="this.style.display='none'" />
-      <img border="1" src={`${process.env.PUBLIC_URL}/logo192_.png`} onError={e => e.target.src = ''} />
       <img border="1" src={`${process.env.PUBLIC_URL}/logo192_.png`} onError={e => e.target.style.display = 'none'} />
     </div>
   );
