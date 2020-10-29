@@ -1,4 +1,4 @@
-TypeORMの比較演算子一覧
+TypeORMのFindオプション一覧
 
 # Equal ( = )
 `SELECT * FROM "post" WHERE "title" = 'About #1'` を実行するコード：
@@ -70,7 +70,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 ```
 
 # Between
-`SELECT * FROM "post" WHERE "likes" BETWEEN 1 AND 10`
+`SELECT * FROM "post" WHERE "likes" BETWEEN 1 AND 10` を実行するコード：
 ```Typescript
 import {Between} from "typeorm";
 
@@ -80,7 +80,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 ```
 
 # In
-`SELECT * FROM "post" WHERE "title" IN ('About #2','About #3')`
+`SELECT * FROM "post" WHERE "title" IN ('About #2','About #3')` を実行するコード：
 ```Typescript
 import {In} from "typeorm";
 
@@ -90,7 +90,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 ```
 
 # Any
-`SELECT * FROM "post" WHERE "title" = ANY(['About #2','About #3'])`
+`SELECT * FROM "post" WHERE "title" = ANY(['About #2','About #3'])` を実行するコード：
 will execute following query (Postgres notation):
 ```Typescript
 import {Any} from "typeorm";
@@ -101,7 +101,7 @@ const loadedPosts = await connection.getRepository(Post).find({
 ```
 
 # IsNull
-`SELECT * FROM "post" WHERE "title" IS NULL`
+`SELECT * FROM "post" WHERE "title" IS NULL` を実行するコード：
 ```Typescript
 import {IsNull} from "typeorm";
 
@@ -111,12 +111,23 @@ const loadedPosts = await connection.getRepository(Post).find({
 ```
 
 # Raw
-`SELECT * FROM "post" WHERE "likes" = "dislikes" - 4`
+`SELECT * FROM "post" WHERE "likes" = "dislikes" - 4` を実行するコード：
 ```Typescript
 import {Raw} from "typeorm";
 
 const loadedPosts = await connection.getRepository(Post).find({
     likes: Raw("dislikes - 4")
+});
+```
+
+# And , Or
+`SELECT * FROM "user" WHERE ("firstName" = 'Timber' AND "lastName" = 'Saw') OR ("firstName" = 'Stan' AND "lastName" = 'Lee')`  を実行するコード：
+```Typescript
+const user = connection.getRepository(User).find({
+  where: [
+    { firstName: "Timber", lastName: "Saw" },
+    { firstName: "Stan", lastName: "Lee" }
+  ]
 });
 ```
 
