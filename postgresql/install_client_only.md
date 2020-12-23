@@ -1,7 +1,7 @@
 # Ubuntuにpsqlのみをインストール
 
 # tl;dr
-Ubuntu 16.04移行に、postgresqlクライアント(psql)のみをインストールします。
+Ubuntu 16.04以降に、postgresqlクライアント(psql)のみをインストールします。
 
 # インストール
 以下を実行します。
