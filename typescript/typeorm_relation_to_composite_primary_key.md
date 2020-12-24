@@ -24,3 +24,7 @@ export class MPsDspEditTbl {
 
 
     const mPsDspEditTbl = await cn.getRepository(MPsDspEditTbl).find({ relations: ['item'], where: { edtStrCode: strCode, edtCtgCode: ctgCode, edtMkDate: mkDate } });
+
+
+
+https://orkhan.gitbook.io/typeorm/docs/relations
