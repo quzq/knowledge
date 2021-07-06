@@ -132,7 +132,8 @@
   - git push -u origin 作成したブランチ名
 
 
-
+リポジトリの比較
+git diff {commitID} {commitID}
 
 
 
