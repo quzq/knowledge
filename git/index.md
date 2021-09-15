@@ -135,8 +135,12 @@
 リポジトリの比較
 git diff {commitID} {commitID}
 
-
-
+### git 
+- rebase
+  - 並行して開発していたブランチを同期させる
+    - カレントのブランチをmasterと同期させたい場合、カレントブランチ上で、`git rebase master`とする。取り消しは、`git reset`を使う
+  - 複数のコミットを１ つにまとめる
+    - git rebase -i [ひとまとめにする地点の一つ前のコミットID]
 
 
 
