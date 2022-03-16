@@ -142,6 +142,8 @@ git diff {commitID} {commitID}
   - 複数のコミットを１ つにまとめる
     - git rebase -i [ひとまとめにする地点の一つ前のコミットID]
 
+### git 
+- プルリクエストの送信
 
 
 
